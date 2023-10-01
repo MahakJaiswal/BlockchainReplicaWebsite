@@ -1,0 +1,224 @@
+﻿@model BLOCKCHAINwebsite.Models.Cls_Master
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blockchain | Log in</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    @*<link href="~/plugins/fontawesome/css/all.min.css" rel="stylesheet" />*@
+    <link href="~/plugins/fontawesome-free/css/all.css" rel="stylesheet" />
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link href="~/dist/css/adminlte.min.css" rel="stylesheet" />
+    <link href="~/css/dashforge.css" rel="stylesheet" />
+    <link href="~/css/dashforge.auth.css" rel="stylesheet" />
+
+
+    <style>
+    .card{
+           background:white;
+           color: black;
+           margin-top:50%;
+           margin-left:5%;
+           margin-right:5%;
+           border-radius:4%;
+           text-align:center;
+           
+    }
+
+    #textbox {
+            background:white;
+            height:50px;
+            width:350px;
+            border-radius:4%;
+            box-sizing:border-box;
+            margin-top:20px;
+            margin-left:60px;
+            color:black;
+            margin-top:20px;
+            font-size:small;
+         
+    }
+
+    .card-img-top{
+            height:140px;
+            width:282px;
+          
+
+    }
+  /*  #div3{
+        background:linear-gradient(90deg,blue,black);
+        height:500px;
+        width:100%;
+       
+    }*/
+
+        #div3 {
+            background: linear-gradient(white, blue), url(images/boxbg.jpg) ;
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+        }
+  
+    </style>
+</head>
+
+<body>
+<div class="container-fluid" style=" background: linear-gradient(40deg, white, blue); color:white; text-align:center;height:500px;">
+<form id="myForm" method="post" action="/Master/Index">
+<div class="row">
+    <div style="text-align:center;margin-top:100px;">
+        <h1>
+            <b>
+                 Be early to the future of finance       
+            </b>  
+        </h1>
+
+        <h4>
+            <p>
+                Buy Bitcoin, Ethereum, and other leading cryptocurrencies on a platform trusted by millions.
+            </p>
+        </h4>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-3">
+        </div>
+
+        @*<div class="col-md-5">
+            <div class="form-group" hidden="hidden">
+            @Html.TextBoxFor(model => model.userId, new { @class = "form-control", required = "required", placeholder = "Enter EmailId. " })
+            </div>
+        </div>*@
+
+        <div class="col-md-5">
+                @Html.TextBoxFor(model => model.username, new { @class = "form-control", required = "required", placeholder = "Enter EmailId. " })
+        </div>
+
+        <div class="col-md-2">
+            <div class="form-group">
+                   <button type="submit" class="btn btn-dark" name="save" value="save" onclick="openWindow()" style="background:linear-gradient(45deg, black, blue);margin-right:5px;"> Submit </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-3" id="card-main">
+            <div class="card">
+                <img src="images/blockimg1.jpeg" class="card-img-top"  alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="images/blockimg2.jpeg" class="card-img-top"  alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                        <img src="images/blockimg4.jpeg" class="card-img-top"  alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                        <img src="images/blockimg5.jpeg" class="card-img-top"  alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+
+    <div class="row" style="background:linear-gradient(70deg, white, blue);text-align:center;margin-top:20px;margin-bottom:20px;">
+        <div class="col-md-5" style="margin-top:70px;margin-bottom:70px;">
+            <h2>
+                <b>
+                    The only crypto app you will ever need.
+                </b>
+            </h2>
+
+            <div id="textbox">
+                <p>
+                            Buy sell and swap with ease
+                            use a card or bank account to Buy BTC,ETH,stablecoins and other assets.
+                </p>                  
+            </div>
+
+            <div id="textbox">
+                <p>
+                   Earn Reward on your crypto.
+                </p>
+            </div>
+
+            <div id="textbox">
+                <p>
+                    Self Custody Your Crypto.
+                </p>
+            </div>
+
+            <div id="textbox">
+                <p>
+                    Connect To Defi.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-7" style="margin-top:70px;margin-bottom:70px;">
+            <h2>
+                  <b>
+                      Buy or sell cryptocurrency.
+                  </b>
+            </h2>
+
+            <div id="image">
+                   <img src="images/BuyBitcoinR.png" alt="...">
+            </div>
+                         
+        </div>
+       
+
+    </div>
+    <div class="row" id="div3">
+           @* <img src="images/GradientImage.jpg" alt="..." style="height:500px;width:100%;">*@
+           <b>hello</b>
+
+    </div>
+
+</div>
+
+</body>
+</html>

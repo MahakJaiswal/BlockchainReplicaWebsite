@@ -1,0 +1,126 @@
+﻿@model BLOCKCHAINwebsite.Models.Cls_Login
+@{
+    Layout = null;
+    ViewBag.Title = "LoginForm";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blockchain | Log in</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    @*<link href="~/plugins/fontawesome/css/all.min.css" rel="stylesheet" />*@
+    <link href="~/plugins/fontawesome-free/css/all.css" rel="stylesheet" />
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link href="~/dist/css/adminlte.min.css" rel="stylesheet" />
+    <link href="~/css/dashforge.css" rel="stylesheet" />
+    <link href="~/css/dashforge.auth.css" rel="stylesheet" />
+</head>
+
+<style>
+
+    /*body, html {
+                height: 100%;
+                margin: 0;
+            }*/
+
+    /*.bgimg-1, .bgimg-2, .bgimg-3 {
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .bgimg-1 {
+                background-image: url('../Images/KYTE LOGIN BACKGROUND.png');
+                height: 100%;
+            }*/
+</style>
+@*
+<body class="hold-transition login-page bgimg-1" style="overflow: hidden;">*@
+<body style=" background: linear-gradient(45deg, blue, white);">
+    @using (Html.BeginForm("LoginForm", "LoginForm", FormMethod.Post))
+    {
+        <div class="content content-fixed content-auth">
+            <div class="container">
+                <div class="media align-items-stretch justify-content-center ht-100p pos-relative">
+                    <div class="media-body align-items-center d-none d-lg-flex">
+                        <div class="mx-wd-600" style="margin-left:5%;">
+@*                            <img src="/Images/blockchain_vector.png" style="height:590px;width:700px;" class="img-fluid" alt="">
+*@
+                               <img src="/Images/blockcenterHD.png" style="height:500px;width:660px;" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="pos-absolute b-0 l-0 tx-12 tx-center d-none">
+                            Workspace design vector is created by <a href="https://www.freepik.com/pikisuperstar" target="_blank">pikisuperstar (freepik.com)</a>
+                        </div>
+                    </div><!-- media-body -->
+                    <div class="sign-wrapper mg-lg-l-50 mg-xl-l-60">
+                        <div class="wd-190p" style="margin-top:140px;">
+                            @*<h3 class="tx-color-01 mg-b-5">Sign In</h3>*@
+                            <h3 class="tx-color-01 mg-r-8">
+                                <img src="~/Images/blockchain_logo.png" style="height:50px; width:260px;margin-right:60px;">
+                            </h3>
+                            <p class="tx-color-03 tx-16 mg-b-19">Please sign in to continue.</p>
+
+                            <div class="form-group">
+                                <label>User Id</label>
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User Id", required = "required", })
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between mg-b-5">
+                                    <label class="mg-b-0-f">Password</label>
+                                    @*<a href="" class="tx-13">Forgot password?</a>*@
+                                </div>
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                            </div>
+                            <button class="btn btn-secondary btn-block" style="color:white;background-color:blue" type="submit">Sign In</button>
+                            @*<button class="btn btn-brand-02 btn-block" type="submit">Sign In</button>*@
+
+                            @if (@ViewBag.Message != null)
+                            {
+
+                                <div class="row" id="divMsg" style="margin-top:1%">
+                                    <div class="col-md-12">
+                                        <div class="card card-default">
+                                            <div class="card-body">
+                                                <div class="alert alert-danger">
+                                                    <h5><i class="fa fa-exclamation-triangle"></i> Alert!</h5>
+                                                    @ViewBag.Message
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div><!-- sign-wrapper -->
+                </div><!-- media -->
+            </div><!-- container -->
+        </div>
+
+        <!-- content -->
+    }
+    <footer class="footer">
+        <div>
+            @*<span>&copy; 2023 </span>
+            <span>Powered by <a href="https://laayn.com/">Laayn Technologies Pvt. Ltd.</a></span>*@
+        </div>
+        @*<div>
+        <nav class="nav">
+        <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+        <a href="../../change-log.html" class="nav-link">Change Log</a>
+        <a href="https://discordapp.com/invite/RYqkVuw" class="nav-link">Get Help</a>
+        </nav>
+        </div>*@
+    </footer>
+</body>
+</html>
+
+
